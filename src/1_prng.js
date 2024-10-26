@@ -1,7 +1,3 @@
-// # Practice
-//
-// Generate a 32-bit unsigned integer with `randomBytes`.
-
 import { uint8ArrayToUint32 } from '../utils/index.js';
 import esMain from 'es-main';
 
@@ -15,9 +11,8 @@ import { randomBytes } from 'crypto';
 export { randomBytes };
 
 if (esMain(import.meta)) {
-  // Replace `undefined` with your solution.
-  const bytes = undefined;
-  const number = undefined;
+  const bytes = randomBytes(4);
+  const number = uint8ArrayToUint32(bytes);
 
   console.log(`random: ${number}`);
 }
